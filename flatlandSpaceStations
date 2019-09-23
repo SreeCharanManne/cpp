@@ -1,0 +1,17 @@
+int flatlandSpaceStations(int n, vector<int> c) {vector<int>a;int min=99999;
+    if(n==c.size()){return 0;}
+    else{
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<c.size();j++)
+       {
+           if(abs(i-c[j])<min)
+           {
+               min=abs(c[j]-i);
+           }
+       }
+    a.push_back(min);cout<<min;min=99999;
+    }
+    return *max_element(a.begin(), a.end());
+    } 
+}
