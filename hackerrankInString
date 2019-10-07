@@ -1,0 +1,14 @@
+string hackerrankInString(string s) {
+string s1="hackerrank";int cnt=0;int j=0;
+for(int i=0;i<s.length();i++)
+{
+if(s[i]==s1[j])
+{
+    j=j+1;
+    cnt++;
+}
+    
+}
+if(cnt==10){return "YES";}
+else{return "NO";}
+}
