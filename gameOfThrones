@@ -1,0 +1,14 @@
+string gameOfThrones(string s) {
+    int n=s.length();int a[26]={0};int cnt=0;
+    for(int i=0;i<n;i++)
+    {
+        a[s[i]-97]++;
+    }
+    for(int i=0;i<26;i++)
+    {
+        if(a[i]%2==0){}
+        else{cnt++;}
+    }    if(cnt>1){return "NO";}
+    else{return "YES";}
+
+}
