@@ -1,0 +1,33 @@
+#include <bits/stdc++.h> 
+using namespace std;
+
+int main(){
+    string s;
+    cin >> s;
+    int n;
+    cin >> n;
+    
+    vector <bool> a(10e7);
+
+        for(int i=0;i<s.length();){
+        int sum1=0;
+        int j;
+        for(j=0;j<s.length()-i && s[i]==s[i+j];j++){
+            
+            sum1+=s[i+j]-'a'+1;
+            
+           
+           a[sum1]=true;
+        }
+        i=i+j;
+    }
+    for(int a1= 0; a1 < n; a1++)                           
+    {   int x;
+        cin >> x;  
+        
+        if(a[x]) cout << "Yes" << endl;  
+        else cout << "No" << endl;   
+    }
+    
+    return 0;
+}
